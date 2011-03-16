@@ -2,13 +2,13 @@
 #labels Featured,Phase-Deploy
 
 = Introduction =
-The purpose of this project is to provide an easy-to-modify platform for access control and alarm functionality. 
+This article is designed to help with the actual implementation of the Open Access Control system in a facility such as a hacker space or home.
 
 ----
 == Disclaimer ==
 This hardware/software project was designed by non-professionals and should be regarded as experimental. No warranties as to the safety, fitness for use or reliability of this project are expressed or implied.
 ----
-==Project Notes==
+==Requirements==
 In order to implement this project at your space, the following items are recommended.
 
   * The latest [http://code.google.com/p/open-access-control/downloads/list Open Access Control hardware]. You can have the board fabricated or purchase one from the [http://shop.23b.org 23b Shop]. All of the parts listed in the Bill of Materials (available in the downloads folder) are available from [http://www.digikey.com Digikey], [http://www.mouser.com Mouser], and other common sources.
@@ -27,6 +27,7 @@ In order to implement this project at your space, the following items are recomm
 
   * RFID, PIN pads or other access readers. Look for [http://en.wikipedia.org/wiki/Wiegand_interface Wiegand] interface door readers. The HID brand is the most widely deployed for buildings, but is proprietary and expensive. The open-standards alternative is EM4100, which is available in abundance on [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=EM4100&_sacat=See-All-Categories eBay] or from Internet shops. Wiegand stuff is usually good for up to 500 feet of cable run  if you use shielded cable. You could also use RS232-based readers, but we have not tested this.
 
+  * A key bypass. Since you will likely be tinkering with the code and "stuff" happens, it is advisable to have an alternate way into your space. Some suggestions including leaving a secondary door available for key access and/or installing electric hardware that includes a keyed cylinder.
 ----
 ==Safety Considerations==
 When planning for your installation, you need to be aware of fire codes and safety issues. Our experience was basically the following:
