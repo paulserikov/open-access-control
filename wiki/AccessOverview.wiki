@@ -13,9 +13,9 @@ In order to implement this project at your space, the following items are recomm
 
   * The latest [http://code.google.com/p/open-access-control/downloads/list Open Access Control hardware]. You can have the board fabricated or purchase one from the [http://shop.23b.org 23b Shop]. All of the parts listed in the Bill of Materials (available in the downloads folder) are available from [http://www.digikey.com Digikey], [http://www.mouser.com Mouser], and other common sources.
 
-  * An [http://arduino.cc Arduino] or compatible micro controller and the latest Arduino software. We have tested with the Duemillanove, Uno and FreeDuino. You will need one with an Atmega 328 for this project.
+  * An [http://arduino.cc Arduino] or compatible micro controller and the latest Arduino software. We have tested with the Duemillanove, Uno and [http://www.freeduino.org/ FreeDuino]. You will need one with an Atmega 328 for this project.
 
-  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A, adjustable switched power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module.
+  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A, switching power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module.
 
   * Some type of enclosure. Suggestions would be to either look for an old alarm panel to guy (call an installer and ask for the old ones?) or a NEMA-format electrical box. These are available from electrician's supply shops for a reasonable price.
 
@@ -23,6 +23,6 @@ In order to implement this project at your space, the following items are recomm
 
   * Door hardware, such as an electric strike, mortise-style electric latch or similar. A low-budget way to electrify a standard residential door is to hack a Schlage or similar keyless door lock that uses a PIN code.
 
-  * RFID, PIN pads or other access readers. Look for [http://en.wikipedia.org/wiki/Wiegand_interface Wiegand] interface door readers. The HID brand is the most widely deployed for buildings, but is proprietary and expensive. The open-standards alternative is EM4100, which is available in abundance on eBay or from Internet shops. Wiegand stuff is usually good for up to 500 feet of cable run  if you use shielded cable. You could also use RS232-based readers, but we have not tested this.
+  * RFID, PIN pads or other access readers. Look for [http://en.wikipedia.org/wiki/Wiegand_interface Wiegand] interface door readers. The HID brand is the most widely deployed for buildings, but is proprietary and expensive. The open-standards alternative is EM4100, which is available in abundance on [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=EM4100&_sacat=See-All-Categories eBay] or from Internet shops. Wiegand stuff is usually good for up to 500 feet of cable run  if you use shielded cable. You could also use RS232-based readers, but we have not tested this.
 
  
