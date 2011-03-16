@@ -21,7 +21,9 @@ In order to implement this project at your space, the following items are recomm
 
   * Alarm sensors such as door magnets, motion detectors, glass-break sensors, etc if using the alarm or door chime features
 
-  * Door hardware, such as an electric strike, mortise-style electric latch or similar. A low-budget way to electrify a standard residential door is to hack a Schlage or similar keyless door lock that uses a PIN code.
+  * Door hardware, such as an [http://adamsrite.com/media/pdf/v2/ES-10_7130-7131.pdf electric strike], mortise-style electric latch or [http://shop.ebay.com/i.html?_nkw=magnetic+door+lock&_sacat=0&_odkw=door+magnet+lock door magnet]. [http://hubpages.com/hub/Electrifying-an-Aluminum-Store-Front-Opening Glass front shop doors] are a bit more expensive to electrify but there is [http://www.adamsrite.com/media/pdf/v2/sw32_4593.pdf drop-in] [http://www.adamsrite.com/NewFiles/e-latch.pdf hardware] to do it.
+
+A low-budget way to electrify a standard residential door is to hack a [http://www.schlage.com/ Schlage] or similar keyless door lock that uses batteries and a PIN code.
 
   * RFID, PIN pads or other access readers. Look for [http://en.wikipedia.org/wiki/Wiegand_interface Wiegand] interface door readers. The HID brand is the most widely deployed for buildings, but is proprietary and expensive. The open-standards alternative is EM4100, which is available in abundance on [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=EM4100&_sacat=See-All-Categories eBay] or from Internet shops. Wiegand stuff is usually good for up to 500 feet of cable run  if you use shielded cable. You could also use RS232-based readers, but we have not tested this.
 
