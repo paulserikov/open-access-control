@@ -31,8 +31,8 @@ In order to implement this project at your space, the following items are recomm
 ----
 ==Safety Considerations==
 When planning for your installation, you need to be aware of fire codes and safety issues. Our experience was basically the following:
-  * You cannot lock the exit doors from people inside. Any door in the exit path that your system controls must have a mechanical device to allow exit regardless of the electronics state. If you can't do that (such as with a door magnet) then the code typically requires that your system have both a request-to-exit motion sensor and a mechanical button near the door which interrupts power and allows exit.
+  * You cannot lock the exit doors from people inside. Any door in the exit path must have a mechanical device to allow exit regardless of the electronics state. If you can't do that (such as with a door magnet) then the fire codes typically require that your system have both a request-to-exit motion sensor and a button near the door which interrupts power and allows exit.
 
-  * If you are installing access hardware on a fire-rated door, you cannot make any alterations to the door and you may need to buy specific hardware. Basically, these doors are solid doors that are rated to withstand a fire for a certain number of minutes. Drilling holes or removing material from them voids the rating and puts you on the hook for replacing the door. Look for a fire-rating sticker somewhere on the frame or hinges, and talk to the building owner if in doubt.
+  * If you are installing access hardware on a fire-rated door, you cannot make any alterations to the door and you may need to buy specific hardware. Basically, these are solid doors that are rated to withstand a fire for a certain number of minutes. Drilling holes or removing material from them voids the rating and puts you on the hook for replacing the door. Look for a fire-rating sticker somewhere on the frame or hinges, and talk to the building owner if in doubt.
 
 This [http://www.securitymagazine.com/articles/requirements-for-card-to-exit-1 article] explains more.
