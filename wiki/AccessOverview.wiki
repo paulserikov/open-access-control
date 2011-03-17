@@ -31,8 +31,23 @@ In order to implement this project at your space, the following items are recomm
 ----
 ==Safety Considerations==
 When planning for your installation, you need to be aware of fire codes and safety issues. Our experience was basically the following:
-  * You cannot lock the exit doors from people inside. Any door in the exit path must have a mechanical device to allow exit regardless of the electronics state. If you can't do that (such as with a door magnet) then the fire codes typically require that your system have both a request-to-exit motion sensor and a button near the door which interrupts power and allows exit.
+  * You cannot lock the exit doors from people inside. Any door in the exit path must have a mechanical device to allow exit regardless of the electronics state. If your hardware can't do that (i.e. door magnets) then the fire codes typically require that your system have both a request-to-exit motion sensor and a button near the door which interrupts power and allows exit.
 
   * If you are installing access hardware on a fire-rated door, you cannot make any alterations to the door and you may need to buy specific hardware. Basically, these are solid doors that are rated to withstand a fire for a certain number of minutes. Drilling holes or removing material from them voids the rating and puts you on the hook for replacing the door. Look for a fire-rating sticker somewhere on the frame or hinges, and talk to the building owner if in doubt.
 
 This [http://www.securitymagazine.com/articles/requirements-for-card-to-exit-1 article] explains more.
+----
+==Installing the controller and wiring==
+This is one of those times where physical security is needed for there to be any security. We recommend placing the controller, UPS and other electronics in a sturdy enclosure that is located away from the entry points and public area. Locking it up is also a good idea. 
+
+  * All wiring should be run inside walls or conduits and not accessible from outside your perimeter. Consider placing your readers behind glass or at least securing the mounting screws with a drop of Epoxy.  A tamper switch is also an option. Wiegand and serial readers have no protocol security and are vulnerable to skimming, replay and MITM attacks.
+
+  * Document your wiring as you go. Use some cable tags or a labeling machine, and also document the wire pairs that you use for power, signals, etc. While the Open Access Control has protection on data and other lines, you don't really want to keep blowing fuses.
+
+  * Consider installing some terminal blocks to distribute power and ground connections. This results in less mess inside the enclosure.
+ 
+  * Be mindful of what power circuit each device is plugged into. For instance, putting the door magnet and an outside reader on the 12V 'A' rail could make it possible for the door to open if the reader wires were shorted out. You are warned.
+
+  * Use solder and heatshrink tubing or quality crimp connectors and a proper crimper for all terminations. Bad connections are the source of 90% of system problems.
+
+  * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 0.5-5K resistor near the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
