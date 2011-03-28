@@ -7,3 +7,4 @@ This wiki contains documentation to help with building, customizing, testing and
 
 Contents:
   * [AccessOverview Hardware Installation and Wiring tips]
+  * [SoftwareTips Software Installation and Customization]
