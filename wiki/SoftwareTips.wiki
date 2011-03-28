@@ -15,9 +15,9 @@ In order to install the software on your Arduino, the following is required.
 ----
 ==Quick Start Guide==
 To get started right away, perform the following tasks:
-  * Download and unzip the program files. Place the main .PDE file into a directory of your choice, such as "OpenAccess".
+  * Download and unzip the program files. Place the main .PDE file into a directory of your choice.
   * Extract the library files into your Arduino libraries directory. See the [http://arduino.cc/en/Guide/HomePage getting started guide ] for more details.
-  * Set your console password by editing Open_Access_Control.pde and changing:
+  * Open the sketch and edit Open_Access_Control.pde. Change:
 {{{
 #define PRIVPASSWORD 0x1234
 }}}
