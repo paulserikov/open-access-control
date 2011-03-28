@@ -47,3 +47,7 @@ Once you have this functionalist working, you can log into the console again and
   * You can customize the reader logic, keypad commands, timeout values and alarm functions as needed. Samples are included in the code. Be sure to make frequent backups.
   * There are about 40 bytes of unused eeprom space available for custom features.
   * Please consider contributing anything that you think is useful back to the project.
+----
+Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a Creative Commons Attribution 3.0 Unported License.
+
+Based on a work at [http://code.google.com code.google.com].
