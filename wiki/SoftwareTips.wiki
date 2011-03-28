@@ -32,21 +32,15 @@ To get started right away, perform the following tasks:
 #define satan   0x1234
 long  superUserList[] = { gonzo, snake, satan};  
 }}}
-  * Compile and uplaod the code again. You should now be able to swipe tags and have the corresponding door pins activate.
+  * Compile and upload the code again. You should now be able to swipe tags and have the corresponding door pins activate.
 
-This [http://www.securitymagazine.com/articles/requirements-for-card-to-exit-1 article] explains more.
 ----
-==Installing the controller and wiring==
-This is one of those times where physical security is needed for there to be any security. We recommend placing the controller, UPS and other electronics in a sturdy enclosure that is located away from the entry points and public area. Locking it up is also a good idea. 
+==Adding users==
+Once you have this functionalist working, you can log into the console again and add users.
 
-  * All wiring should be run inside walls or conduits and not accessible from outside your perimeter. Consider placing your readers behind glass or at least securing the mounting screws with a drop of Epoxy.  A tamper switch is also an option. Wiegand and serial readers have no protocol security and are vulnerable to skimming, replay and MITM attacks.
-
-  * Document your wiring as you go. Use some cable tags or a labeling machine, and also document the wire pairs that you use for power, signals, etc. While the Open Access Control has protection on data and other lines, you don't really want to keep blowing fuses.
-
-  * Consider installing some terminal blocks to distribute power and ground connections. This results in less mess inside the enclosure.
- 
-  * Be mindful of what power circuit each device is plugged into. For instance, putting the door magnet and an outside reader on the 12V 'A' rail could make it possible for the door to open if the reader wires were shorted out. You are warned.
-
-  * Use solder and heatshrink tubing or quality crimp connectors and a proper crimper for all terminations. Bad connections are the source of 90% of system problems.
-
-  * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 0.5-5K resistor near the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
+  * You must enter the console password to enable user editing and all other functions other than locking up and setting the alarm
+  * You can exit privileged mode by typing 'e' again.
+  * Several usermasks (security levels) are defined in the code. A default of 254 will work for getting started.
+  * You can store up to 200 users in eeprom on the Arduino. Users are numbered 0..199.
+  * It's recommended that you create a spreadsheet of your users, as the software will replace the tage info with asteriks unless debugging is enabled.
+  * You can customize the reader logic, keypad commands and alarm functions as needed. Samples are included in the code. Be sure to make frequent backups of the code!
