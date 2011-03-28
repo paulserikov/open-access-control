@@ -1,0 +1,57 @@
+#summary Project
+#labels Phase-Implementation
+
+= Introduction =
+This article is designed to help with the actual implementation of the Open Access Control system in a facility such as a hacker space or home.
+
+----
+== Disclaimer ==
+This hardware/software project was designed by non-professionals and should be regarded as experimental. No warranties as to the safety, fitness for use or reliability of this project are expressed or implied.
+----
+==Requirements==
+In order to implement this project at your space, the following items are recommended.
+
+  * The latest [http://code.google.com/p/open-access-control/downloads/list Open Access Control hardware]. You can have the board fabricated or purchase one from the [http://shop.23b.org 23b Shop]. All of the parts listed in the Bill of Materials (available in the downloads folder) are available from [http://www.digikey.com Digikey], [http://www.mouser.com Mouser], and other common sources.
+
+  * An [http://arduino.cc Arduino] or compatible micro controller and the latest Arduino software. We have tested with the Duemillanove, Uno and [http://www.freeduino.org/ FreeDuino]. You will need one with an Atmega 328 for this project.
+
+  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A, switching power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module.
+
+  * Some type of enclosure. Suggestions would be to either look for an old alarm panel to gut (call an installer and ask for the old ones) or a NEMA-format electrical box. These are available from electrical supply shops for a reasonable price.
+
+  * Alarm sensors such as door magnets, motion detectors, glass-break sensors, etc if using the alarm or door chime feature set.
+
+  * Door hardware, such as an [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=electric+strike electric strike], mortise-style electric latch or [http://shop.ebay.com/i.html?_nkw=magnetic+door+lock&_sacat=0&_odkw=door+magnet+lock door magnet]. [http://hubpages.com/hub/Electrifying-an-Aluminum-Store-Front-Opening Glass front shop doors] are a bit more expensive to electrify but there is [http://www.adamsrite.com/media/pdf/v2/sw32_4593.pdf drop-in] [http://www.adamsrite.com/NewFiles/e-latch.pdf hardware] to do it.
+
+  A low-budget way to electrify a standard residential door is to hack a [http://www.schlage.com/ Schlage] or similar keyless door lock that uses batteries and a PIN code.
+
+  * RFID, PIN pads or other access readers. Look for [http://en.wikipedia.org/wiki/Wiegand_interface Wiegand] interface door readers. The HID brand is the most widely deployed for buildings, but is proprietary and expensive. The open-standards alternative is EM4100, which is available in abundance on [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=EM4100&_sacat=See-All-Categories eBay] or from Internet shops. Wiegand stuff is usually good for up to 500 feet of cable run  if you use shielded cable. You could also use RS232-based readers, but we have not tested this.
+
+  * A key bypass. Since you will likely be tinkering with the code and "stuff" happens, it is advisable to have an alternate way into your space. Some suggestions including leaving a secondary door available for key access and/or installing electric hardware that includes a keyed cylinder.
+----
+==Safety Considerations==
+When planning for your installation, you need to be aware of fire codes and safety issues. Our experience was basically the following:
+  * You cannot lock the exit doors from people inside. Any door in the exit path must have a mechanical device to allow exit regardless of the electronics state. If your hardware can't do that (i.e. door magnets) then the fire codes typically require that your system have both a request-to-exit motion sensor and a button near the door which interrupts power and allows exit.
+
+  * If you are installing access hardware on a fire-rated door, you cannot make any alterations to the door and you may need to buy specific hardware. Basically, these are solid doors that are rated to withstand a fire for a certain number of minutes. Drilling holes or removing material from them voids the rating and puts you on the hook for replacing the door. Look for a fire-rating sticker somewhere on the frame or hinges, and talk to the building owner if in doubt.
+
+This [http://www.securitymagazine.com/articles/requirements-for-card-to-exit-1 article] explains more.
+----
+==Installing the controller and wiring==
+This is one of those times where physical security is needed for there to be any security. We recommend placing the controller, UPS and other electronics in a sturdy enclosure that is located away from the entry points and public area. Locking it up is also a good idea. 
+
+  * All wiring should be run inside walls or conduits and not accessible from outside your perimeter. Consider placing your readers behind glass or at least securing the mounting screws with a drop of Epoxy.  A tamper switch is also an option. Wiegand and serial readers have no protocol security and are vulnerable to skimming, replay and MITM attacks.
+
+  * Document your wiring as you go. Use some cable tags or a labeling machine, and also document the wire pairs that you use for power, signals, etc. While the Open Access Control has protection on data and other lines, you don't really want to keep blowing fuses.
+
+  * Consider installing some terminal blocks to distribute power and ground connections. This results in less mess inside the enclosure.
+ 
+  * Be mindful of what power circuit each device is plugged into. For instance, putting the door magnet and an outside reader on the 12V 'A' rail could make it possible for the door to open if the reader wires were shorted out. You are warned.
+
+  * Use solder and heatshrink tubing or quality crimp connectors and a proper crimper for all terminations. Bad connections are the source of 90% of system problems.
+
+  * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 0.5-5K resistor near the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
+----
+Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a Creative Commons Attribution 3.0 Unported License.
+
+Based on a work at [http://code.google.com code.google.com].
