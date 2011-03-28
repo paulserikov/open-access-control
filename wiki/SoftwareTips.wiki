@@ -10,15 +10,29 @@ In order to install the software on your Arduino, the following is required.
 
   * The latest [http://arduino.cc Arduino IDE] for your Windows, Linux, or MAC system.
 
-  * Some basic hardware to test with. At a minimum, you'll want to get at least one PIN or RFID reader and gook up some LEDs to the output pins to check their status. See the hardware setup guide for more info on readers.
+  * Some basic hardware to test with. At a minimum, you'll want to get at least one PIN or RFID reader and gook up some LEDs to the output pins to check their status. See the [AccessOverview hardware setup guide] for more info on readers.
 
-  * A key bypass. Since you will likely be tinkering with the code and "stuff" happens, it is advisable to have an alternate way into your space. Some suggestions including leaving a secondary door available for key access and/or installing electric hardware that includes a keyed cylinder.
 ----
-==Safety Considerations==
-When planning for your installation, you need to be aware of fire codes and safety issues. Our experience was basically the following:
-  * You cannot lock the exit doors from people inside. Any door in the exit path must have a mechanical device to allow exit regardless of the electronics state. If your hardware can't do that (i.e. door magnets) then the fire codes typically require that your system have both a request-to-exit motion sensor and a button near the door which interrupts power and allows exit.
-
-  * If you are installing access hardware on a fire-rated door, you cannot make any alterations to the door and you may need to buy specific hardware. Basically, these are solid doors that are rated to withstand a fire for a certain number of minutes. Drilling holes or removing material from them voids the rating and puts you on the hook for replacing the door. Look for a fire-rating sticker somewhere on the frame or hinges, and talk to the building owner if in doubt.
+==Quick Start Guide==
+To get started right away, perform the following tasks:
+  * Download and unzip the program files. Place the main .PDE file into a directory of your choice, such as "OpenAccess".
+  * Extract the library files into your Arduino libraries directory. See the [http://arduino.cc/en/Guide/HomePage getting started guide ] for more details.
+  * Set your console password by editing Open_Access_Control.pde and changing:
+{{{
+#define PRIVPASSWORD 0x1234
+}}}
+ to something less obvious.
+  * Compile and upload the sketch.
+  * Start up the Serial Monitor or another terminal. Attach to the Arduino and make sure the console comes up.
+  * Scan a tag or enter a 6-digit PIN number at your reader and write down the result.
+  * Edit your super static user list to put at least one of these tag values in permanently. You'll want this in case you lock yourself out later.
+{{{
+#define gonzo   0x1234                  
+#define snake   0x1234                 
+#define satan   0x1234
+long  superUserList[] = { gonzo, snake, satan};  
+}}}
+  * Compile and uplaod the code again. You should now be able to swipe tags and have the corresponding door pins activate.
 
 This [http://www.securitymagazine.com/articles/requirements-for-card-to-exit-1 article] explains more.
 ----
