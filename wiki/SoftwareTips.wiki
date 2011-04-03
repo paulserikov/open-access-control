@@ -47,6 +47,17 @@ Once you have this functionalist working, you can log into the console again and
   * You can customize the reader logic, keypad commands, timeout values and alarm functions as needed. Samples are included in the code. Be sure to make frequent backups.
   * There are about 40 bytes of unused eeprom space available for custom features.
   * Please consider contributing anything that you think is useful back to the project.
+==Sample Usage Instructions==
+You may want to post a set of directions near an inside keypad to remind users of system commands. Here is a sample:
+
+  * 1# - Turns off front door chime.
+  * 2# - Arms alarm and locks all doors.
+  * 3# - Locks outside door, leaves inside unlocked.
+  * 4# - Unlocks all doors and leaves unlocked.  Door chime on front door
+  * 5# - Locks all doors.
+  * 111111 - Locks all doors (no card or # needed)
+
+
 ----
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].
 
