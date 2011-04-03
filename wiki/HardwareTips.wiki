@@ -52,6 +52,40 @@ This is one of those times where physical security is needed for there to be any
 
   * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 0.5-5K resistor near the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
 ----
+==Security considerations==
+Once the system is in production, it would be a good idea to prevent unauthorized users from updating the code or tampering with the hardware. Here are some tips:
+
+  * On most Arduino models, you can connect a 120ohm resistor between "+5V" and "RST" to prevent the controller from being reset by the serial port. This will effectively prevent the boot loader from being activated and thus prevent updates to your code.
+  * The controller itself should be locked in an enclosure or other secure location. There is no software security without physical security.
+----
+==Remote Monitoring and Administration==
+A quick way to get the system to log events and report on them is to attach a Linux PC via USB or serial, open a session, and log it to a file. The syntax looks like this:
+
+{{{
+~/logs$minicom -L /home/access/scripts/access.log
+}}}
+
+Use the "screen" command to run this, and you'll be able to reattach to the serial session any time you need to perform administration. The system does not echo commands, so your enable password should not end up in the logs.
+
+To monitor the system and send alerts, create one or more shell scripts like this:
+
+{{{
+#!/bin/bash
+tail -0f access_log.txt | egrep --line-buffered -i "triggered" | while read line
+        do
+                msmtp -t < /home/access/scripts/alert_msg.txt
+        done
+}}}
+
+You'll need to run these scripts all time, so run them with the '&' option like this:
+
+{{{
+~/script$log_access_alert.sh &
+}}}
+
+The "msmtp" package is a great way to send alerting messages out via SMTP without having to run a mail server locally. You can configure it to use gmail, Yahoo, etc or your own private SMTP server on another system.
+
+----
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].
 
 Based on a work at [http://code.google.com code.google.com].
