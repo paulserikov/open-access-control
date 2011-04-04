@@ -4,7 +4,7 @@
 =Open Access v2.11 board assembly and testing =
 The Open Access Control board is a pretty straightforward through-hole assembly job. The top silkscreen has all of the component layouts and their values. We recommend doing the assembly in the order listed however, as you can test each section of the board as you go.
 
-The hardware kit supplied by 23B comes with the PCB and all components listed in the hardware design docs. Estimated build time is 2-4hours.
+The hardware kit supplied by [http://shop.23b.org 23B] comes with the PCB and all components listed in the hardware design docs. Estimated build time is 2-4hours.
 For info on obtaining one of these kits, you can email arclight at 
 
 For those that wish to go it alone, the bill of materials is provided with the hardware CAD files download. All parts can be sourced from Digikey, Mouser, Element 14, etc. The Arduino and Arduino pin headers
