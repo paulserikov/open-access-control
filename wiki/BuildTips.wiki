@@ -8,7 +8,7 @@ The hardware kit supplied by 23B comes with the PCB and all components listed in
 For info on obtaining one of these kits, you can email arclight at 
 
 For those that wish to go it alone, the bill of materials is provided with the hardware CAD files download. All parts can be sourced from Digikey, Mouser, Element 14, etc. The Arduino and Arduino pin headers
-can be sourced from [http://www.adafruit.comAdafruit], [http://www.sparkfun.com Sparkfun], [http://www.nkcelectronics.com/ NKC] and other electronics hobby vendors.
+can be sourced from [http://www.adafruit.com Adafruit], [http://www.sparkfun.com Sparkfun], [http://www.nkcelectronics.com/ NKC] and other electronics hobby vendors.
 ----
 
 ==Step-by-step building and testing instructions==
