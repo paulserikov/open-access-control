@@ -53,7 +53,12 @@ Congratulations, you're done!
 
   * Version 2.00 and 2.10 of the hardware require that the LM-2575 regulator be installed with a mica insulator underneath the heatsink or mounting tab. Failing to install this part could result in a 5V short.
   * All parts on the v2.10 and 2.11 layouts have been tested with an actual build. If detachable screw terminals such as the Phoenix 5mm Fixed Terminal Block parts are to be used. the diameter of the holes needs to be increased to at least .055".
-  * The design can be adapted for 24V use. The following changes need to be made: 24V coil relays, 50V MOV, 30V TVS diode, 4.7K resistors for relay LEDs, 10K resistors on inputs in 24V signals are used.
+  * The design can be adapted for 24V use. The following parts must be changed if a 24V supply voltage is to be used: 
+    * 24V coil relays
+    * 50V MOV 
+    * 30V TVS diode 
+    * 4.7K resistors for relay LEDs
+    * 10K resistors on inputs in 24V signals are used.
 
 
 ----
