@@ -47,5 +47,15 @@ Short each of these terminals to +5V using a jumper and check that the reading c
 
 Congratulations, you're done!
 
-While the analog and digital pins are general purpose and opto-isolated, the software will by default recognize the 4 digital pins as inputs for two Wiegand26 format door readers. The analog inputs are recognized as alarm zones.
+----
+==Notes==
 
+  * Version 2.00 and 2.10 of the hardware require that the LM-2575 regulator be installed with a mica insulator underneath the heatsink or mounting tab. Failing to install this part could result in a 5V short.
+  * All parts on the v2.10 and 2.11 layouts have been tested with an actual build. If detachable screw terminals such as the Phoenix 5mm Fixed Terminal Block parts are to be used. the diameter of the holes needs to be increased to at least .055".
+  * The design can be adapted for 24V use. The following changes need to be made: 24V coil relays, 50V MOV, 30V TVS diode, 4.7K resistors for relay LEDs, 10K resistors on inputs in 24V signals are used.
+
+
+----
+Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].
+
+Based on a work at [http://code.google.com code.google.com].
