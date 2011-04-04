@@ -1,4 +1,4 @@
-#summary Project
+#summary Hardware installation tips
 #labels Phase-Implementation
 
 = Introduction =
