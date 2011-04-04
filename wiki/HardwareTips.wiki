@@ -50,7 +50,7 @@ This is one of those times where physical security is needed for there to be any
 
   * Use solder and heatshrink tubing or quality crimp connectors and a proper crimper for all terminations. Bad connections are the source of 90% of system problems.
 
-  * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 0.5-5K resistor near the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
+  * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 5-10K resistor at the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
 ----
 ==Security considerations==
 Once the system is in production, it would be a good idea to prevent unauthorized users from updating the code or tampering with the hardware. Here are some tips:
