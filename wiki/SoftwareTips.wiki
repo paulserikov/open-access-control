@@ -36,7 +36,7 @@ long  superUserList[] = { gonzo, snake, satan};
 
 ----
 ==Adding users==
-Once you have this functionalist working, you can log into the console again and add users.
+Once you have this working, you can log into the console again and add users.
 
   * You must enter the console password to enable user editing and all other functions other than locking up and setting the alarm
   * You can exit privileged mode by typing 'e' again.
