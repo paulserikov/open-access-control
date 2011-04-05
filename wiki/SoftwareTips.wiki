@@ -45,7 +45,7 @@ Once you have this working, you can log into the console again and add users.
   * It's recommended that you create a spreadsheet of your users, as the software will replace the tage info with asteriks unless debugging is enabled.
 ==Customization==
   * You can customize the reader logic, keypad commands, timeout values and alarm functions as needed. Samples are included in the code. Be sure to make frequent backups.
-  * There are about 40 bytes of unused eeprom space available for custom features.
+  * There are about 20 bytes of unused eeprom space, 16KB of flash and about 650-700 bytes of free memory when an Atmega 328-based Arduino is used. Room for additional features does exist.
   * Please consider contributing anything that you think is useful back to the project.
 ==Sample Usage Instructions==
 You may want to post a set of directions near an inside keypad to remind users of system commands. Here is a sample:
