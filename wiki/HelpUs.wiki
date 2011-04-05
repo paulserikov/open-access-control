@@ -13,7 +13,7 @@ If you find this project useful, you can help support it in the following ways:
   * Send us hardware to test with. We are particularly looking for:
     * Wiegand or RS232/RS422 RFID readers (Indala, Mifare, etc)
     * Magnetic stripe readers
-    * PIN pad and scramble readers
+    * PIN pad and scramble pad hardware
     * RFID and other access tokens
 
 You can e-mail to: arclight at gmail dot com
