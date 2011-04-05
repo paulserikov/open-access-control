@@ -24,7 +24,7 @@ To get started right away, perform the following tasks:
  to something less obvious.
   * Compile and upload the sketch.
   * Start up the Serial Monitor or another terminal. Attach to the Arduino and make sure the console comes up.
-  * Scan a tag or enter a 6-digit PIN number at your reader and write down the result.
+  * Scan a tag or enter a 7-digit PIN number at your reader and write down the result.
   * Edit your super static user list to put at least one of these tag values in permanently. You'll want this in case you lock yourself out later.
 {{{
 #define gonzo   0x1234                  
