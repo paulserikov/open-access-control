@@ -55,8 +55,9 @@ This is one of those times where physical security is needed for there to be any
 ==Security considerations==
 Once the system is in production, it would be a good idea to prevent unauthorized users from updating the code or tampering with the hardware. Here are some tips:
 
-  * On most Arduino models, you can connect a 120ohm resistor between "+5V" and "RST" to prevent the controller from being reset by the serial port. This will effectively prevent the boot loader from being activated and thus prevent updates to your code.
+  * On most Arduino models, you can connect a 120ohm resistor between "+5V" and "RST" to prevent the controller from being reset by the serial port. This will effectively prevent the boot loader from being activated and thus prevent updates to your code. If you solder a 1/4w resistor between the two outer pins of a 3-pin .100 header, you can make a handy little "remove for programming" dongle.
   * The controller itself should be locked in an enclosure or other secure location. There is no software security without physical security.
+  * Alarm sensors are a topic unto themselves. At a minimum, you'll want to have door sensor on the doors controlled by the access system. The simplest variety is a small magnet that screws to the door and a reed switch that mounts above it. Motion sensors, glass break sensors, and a plethora of other sensors are available. Think about protecting your perimeter and then protecting the control panel when designing your zones. 
 ----
 ==Remote Monitoring and Administration==
 A quick way to get the system to log events and report on them is to attach a Linux PC via USB or serial, open a session, and log it to a file. The syntax looks like this:
