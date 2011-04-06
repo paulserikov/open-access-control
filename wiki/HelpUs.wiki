@@ -16,7 +16,8 @@ If you find this project useful, you can help support it in the following ways:
     * PIN pad and scramble pad hardware
     * RFID and other access tokens
 
-You can e-mail to: arclight at gmail dot com
+You can e-mail to: arclight at gmail dot com.
+
 ----  
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].
    
