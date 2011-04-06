@@ -9,7 +9,7 @@ If you find this project useful, you can help support it in the following ways:
 
   * Report bugs and issues with the software or hardware
   * Send us your code or hardware design improvements
-  * Buy a kit from the [http://shop.23b.org 23B shop]
+  * Buy a kit from the [http://shop.23b.org 23B shop] or buy the PCB from the [http://batchpcb.com/index.php/Products/56674 BatchPCB Marketplace]
   * Send us hardware to test with. We are particularly looking for:
     * Wiegand or RS232/RS422 RFID readers (Indala, Mifare,HID, etc)
     * Magnetic stripe readers
