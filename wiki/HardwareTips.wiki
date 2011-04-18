@@ -93,8 +93,8 @@ line
         do
             rm message_tmp.txt
             cp log_msg.txt message_tmp.txt
+            sleep 1
             tail -5 access_log.txt >> message_tmp.txt
-            echo EOF >>message_tmp.txt
             msmtp -t < message_tmp.txt
         done
 
