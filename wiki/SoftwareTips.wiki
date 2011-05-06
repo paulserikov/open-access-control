@@ -10,7 +10,7 @@ In order to install the software on your Arduino, the following is required.
 
   * The latest [http://arduino.cc Arduino IDE] for your Windows, Linux, or MAC system.
 
-  * Some basic hardware to test with. At a minimum, you'll want to get at least one PIN or RFID reader and gook up some LEDs to the output pins to check their status. See the [AccessOverview hardware setup guide] for more info on readers.
+  * Some basic hardware to test with. At a minimum, you'll want to get at least one PIN or RFID reader and gook up some LEDs to the output pins to check their status. See the [HardwareTips hardware setup guide] for more info on readers.
 
 ----
 ==Quick Start Guide==
