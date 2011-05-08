@@ -1,0 +1,48 @@
+#summary Tips for choosing door hardware
+
+= Introduction =
+If you pick up a lock catalog, there are a huge number of choices for electric strikes, door magnets, and locks. This article is designed to help you choose appropriate hardware for your home or commercial door. 
+----
+== Disclaimer ==
+This page was not written by locksmiths. Modifying a fire-rated door may void its rating, and installing your hardware incorrectly may lock you out. No warranties as to the safety, fitness for use or reliability of this project are expressed or implied.
+----
+==Intro to Electrified Door Locks==
+The basic requirement for any electronic access control system is that you be able to close a relay, energize (or de-energize) some piece of physical hardware, and thus unlock the door. There are several types of doors that we will cover
+
+
+  * Garage doors - These are trivial to electrify, provided that you have an electric garage door opener installed. Electrifying one of these simply involves tapping the "door open" button on the wall and running it to one of your relays. Be sure to check with a multimeter to see if the button is normally open (NO) or normally closed (NC) and connect the appropriate terminals.
+
+  * Residential deadbolts. This would be your typical Kwikset or Schlage lock set as found in most homes in North America. They usually mount in a 2.25" hole. Options for electrifying these include special door strikes that will push in and release the latch, surface-mounted hardware that does not use the installed lock, and modified "keyless entry" sets that normally use batteries.
+
+  * Commercial doors with mortise locks. These can be identified as the type of door where most of the hardware is embedded in a large pocket that has been machined into the edge of the door, leaving only a handle and a small round lock cylinder visible. Common brands are Sargent, Adams Rite, and the professional lines from Schlage. 
+
+  * Glass store front doors. The majority of retail and office spaces in the U.S. come equipped with an Aluminum-frame door containing an Adams-Rite mortise deadbolt or dead latch. There is specific hardware available from the manufacturer for this.
+
+  * Other types of doors. A common way to electrify anything else (interior doors, doors where you do not have access to the door frame to run a strike or wires) is a door magnet. These are large electromagnets that are typically bolted into the top of the door and are rated for 1000-2500lbs holding force. When energized, they keep the door shut. They are also "fail secure," meaning that the door will open when power is interrupted. This can be a good thing for a fire exit, but may not be a good thing for a secure area.
+
+==How to Measure your Door==
+There are a few key parameters that you must know in order to order lock hardware. These measurements mostly apply to mortise locks, but may be asked for when ordering for other types.
+
+
+1. Handing - This refers to what direction the door opens, with respect to the hinges and interior.
+
+The way this is specified is really confusing. There are only two types of locks Adams Rite sells for these doors. "LH" or "Left Hand" is the same as "RRH" or "Reverse Right Hand" for purposes of  ordering parts. We have the LH/RRH, as our door opens out, with thedoorknob on the left if you are standing outside looking at it. Here is a good description:
+
+[http://www.directdoorhardware.com/door_handing.htm Door handing guide]
+[http://www.doorwaysplus.com/helpful-information/doorway-handing-chart Convenient chart]
+
+2. Backset - This is the distance between the center of the keyhole
+and the front edge of the lock. Ours was 1 1/8", which is pretty
+common for glass store front doors. Your door edge might be tapered or rounded, so measure the front edge first.
+
+3. Door edge - If you open the door and look at the edge, it could be
+square, rounded or beveled. The trim plate that covers the locking
+mechanism might be available in more than one contour. If it is, get
+it. If not, the rounded one will fit anyway. Ours came with both a
+square and rounded one.
+
+
+----
+Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].
+
+Based on a work at [http://code.google.com code.google.com].
