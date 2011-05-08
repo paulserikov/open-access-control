@@ -25,6 +25,8 @@ In order to implement this project at your space, the following items are recomm
 
   A low-budget way to electrify a standard residential door is to hack a [http://www.schlage.com/ Schlage] or similar keyless door lock that uses batteries and a PIN code.
 
+See the [DoorInstallation Wiki Page] for more information on door hardware.
+
   * RFID, PIN pads or other access readers. Look for [http://en.wikipedia.org/wiki/Wiegand_interface Wiegand] interface door readers. The HID brand is the most widely deployed for buildings, but is proprietary and expensive. The open-standards alternative is EM4100, which is available in abundance on [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=EM4100&_sacat=See-All-Categories eBay] or from Internet shops. Wiegand stuff is usually good for up to 500 feet of cable run  if you use shielded cable. You could also use RS232-based readers, but we have not tested this.
 
   * A key bypass. Since you will likely be tinkering with the code and "stuff" happens, it is advisable to have an alternate way into your space. Some suggestions including leaving a secondary door available for key access and/or installing electric hardware that includes a keyed cylinder.
