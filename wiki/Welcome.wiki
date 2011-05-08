@@ -10,7 +10,7 @@ Contents:
   * [BuildTips Hardware Assembly and Testing instructions]
   * [HardwareTips Hardware Installation and Wiring tips]
   * [SoftwareTips Software Installation and Customization]
-  * [DoorInstallation Information about Elctrified Door Hardware]
+  * [DoorInstallation Information about Electrified Door Hardware]
   * [HelpUs Things you can do to help support this project]
 ----
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].  
