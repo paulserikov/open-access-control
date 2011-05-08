@@ -44,7 +44,7 @@ square and rounded one.
 ==How to take apart a mortise lock==
 Taking apart most mortise locks pretty easy. The steps for an Adams Rite are as follows:
 
-1. Open the door and unscrew the trim plate that covers the locking mechanism on the door edge. There should be two allen head or flat-head screws visible. Unscrew them about 10 turns, then grasp the lock cylinder (use the key partially inserted or a screwdriver) unscrew the lock cylinder from the door front. Remove the lock cykinder or exit device from the inside using the same procedure. 
+1. Open the door and unscrew the trim plate that covers the locking mechanism on the door edge. There should be two Allen head or flat-head screws visible. Unscrew them about 10 turns, then grasp the lock cylinder (use the key partially inserted or a screwdriver) unscrew the lock cylinder from the door front. Remove the lock cylinder or exit device from the inside using the same procedure. 
 
 2. There may also be a "locked/unlocked" status indicator on the inside. Remove this as well.
 
@@ -63,8 +63,8 @@ Some systems have very powerful solenoids, and will require a 5A or larger power
 
   * Most of the newer device mentioned above will work with 18-22ga wire, depending on the length of the run. You can often get away with CAT5 cable if you solder some of the pairs together. Always check the manufacturer's data sheet to be sure.
   * Watch out for continuous vs. intermittent duty cycles. Some hardware cannot be left in an unlocked state indefinitely, while other models can.
-  * AC vs. DC. The voltage rating for AC current is often different than DC, as some of these devices rely on inductance to present the proper load to the power supply. Running a 12VAC rated device at 24V may cause it to overheat.
-  * Door supervision - Some hardware comes with an open/closed sensor inside the lock. This is a nice, clean way to run the door sensor lines, but be sure to check before ordering. Many manufacturers make several variants of their hardware, and you may get one that is wired up for it but does not have the feature insalled.
+  * AC vs. DC. The voltage rating for AC current is often different than DC, as some of these devices rely on inductance to present the proper load to the power supply. Running a 12VAC rated device at 12VDC may cause it to overheat.
+  * Door supervision - Some hardware comes with an open/closed sensor inside the lock. This is a nice, clean way to run the door sensor lines, but be sure to check before ordering. Many manufacturers make several variants of their hardware, and you may get one that is wired up for it but does not have the feature installed.
   * It probably goes without saying, but you MUST protect the wiring to these devices if you want to have any security at all. Unlike the reader inputs, tampering with the door hardware can lead to immediate access being granted.
 
 ----
