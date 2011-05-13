@@ -12,6 +12,8 @@ Contents:
   * [SoftwareTips Software Installation and Customization]
   * [DoorInstallation Information about Electrified Door Hardware]
   * [HelpUs Things you can do to help support this project]
+
+Updates: The system has now been tested with [http://www.hidglobal.com/ HID Corporation] readers. See the [HardwareTips Hardware Tips] page for details on how to connect these.
 ----
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].  
      
