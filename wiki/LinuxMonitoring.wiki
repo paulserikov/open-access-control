@@ -1,15 +1,12 @@
 #summary Linux Monitoring with SheevaPlug PC and Slackware
 
 
-= How to configure a Sheevaplug PC for monitoring =
+== How to configure a Sheevaplug PC for monitoring ==
 
-This page explains how to set up a Sheevaplug embedded PC for monitoring the Open Access Control.
-
-Sheevaplug Access Control computer - notes
+=This page explains how to set up a Sheevaplug embedded PC for monitoring the Open Access Control.=
 
 Updated 9/25/2011
-ArmedSlack Linux v13.37
-http://www.armedslack.org
+Tutorial based on the ]http://www.plugcomputer.org/ Sheevaplug PC] from [http://www.globalscaletechnologies.com Globalscale Technologies] and [http://www.armedslack.org ArmedSlack Linux v13.37].
 
 1. Download ArmedSlack v13.37 using these instructions:
 http://www.armedslack.org/doku.php?id=getslack
