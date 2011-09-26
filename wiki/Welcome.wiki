@@ -6,7 +6,7 @@
 
 This wiki contains documentation to help with building, customizing, testing and deploying the Open Access system.
 
-Contents: 
+Contents:  
   * [BuildTips Hardware Assembly and Testing instructions]
   * [HardwareTips Hardware Installation and Wiring tips]
   * [SoftwareTips Software Installation and Customization]
