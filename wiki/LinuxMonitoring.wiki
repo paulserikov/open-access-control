@@ -126,29 +126,25 @@ ________________________________________
 # Start logging functions in a screen
 /bin/su - access -c "screen -dmS MINICOM /home/access/scripts/start_logging.sh"
 }}}
-________________________________________
 
 
 log_notify.sh
-________________________________________
+
 {{{
 #!/bin/bash
 tail -0f /home/access/scripts/access_log.txt | egrep --line-buffered -i "authenticated" | while read line
         do
                 rm /home/access/scripts/message_tmp.txt
-                cp /home/access/scripts/log_msg.txt /home/access/scripts/message
-_tmp.txt
+                cp /home/access/scripts/log_msg.txt /home/access/scripts/message_tmp.txt
                 sleep 1
                 tail -6 /home/access/scripts/access_log.txt >> /home/access/scri
 pts/message_tmp.txt
                 msmtp -t < /home/access/scripts/message_tmp.txt
         done
 }}}
-________________________________________
 
 
 log_alert.sh
-________________________________________
 {{{
 #!/bin/bash
 cd /home/access/scripts
@@ -158,15 +154,17 @@ while read line
                 msmtp -t < /home/access/scripts/alert_msg.txt
         done
 }}}
-________________________________________
+
 
 log_msg.txt 
-________________________________________
+{{{
 From:hackerspace_notifier@yourdomain.com
 To:somebody@domain.com, somebody_else@anotherdomain.com
 Subject:User at the Hacker Space
-
+}}}
+<BR>
 log_alert.txt
+{{{
 From:hackerspace_notifier@yourdomain.com
 To:somebody@domain.com, somebody_else@anotherdomain.com
 Subject: Alert: Alarm triggered at shop
@@ -174,7 +172,8 @@ Subject: Alert: Alarm triggered at shop
 Please log in to the webcame at http://www.somedomain.com/cameras to check status.
 
 -The Hacker Space
-________________________________________
+}}}
+
 
 
 
@@ -230,19 +229,9 @@ pu rtscts           No
 ________________________________________
 
 
-f.  Configure _iptables_ with some basic rules to protect the monitoring system:
-________________________________________
-{{{
-# Put this in /etc/sysconfig/iptables
-# chmod 700 it, then add /etc/sysconfig/iptables to /etc/rc.local
-iptables --flush
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -p tcp  --dport 22 -m state --state NEW -j ACCEPT
-iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
-}}}
-________________________________________
+f.  Configure _iptables_ with some basic rules to protect the monitoring system. Tutorial here:
 
+[http://www.howtoforge.com/linux_iptables_sarge Iptables rules]
 
 g. Add the following file to /home/access. Modify as needed for your outgoing e-mail account.
 
