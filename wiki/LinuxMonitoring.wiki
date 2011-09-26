@@ -29,7 +29,8 @@ Windows USB serial drivers are here, also more Linux help:
 [http://www.plugcomputer.org/plugwiki/index.php/Serial_terminal_program]
 
 4. Follow installation instructions at:
-[ftp://ftp.armedslack.org/armedslack/armedslack-3.37/INSTALL_KIRKWOOD.TXT]
+<BR>
+[ftp://ftp.armedslack.org/armedslack/armedslack/3.37/INSTALL_KIRKWOOD.TXT]
 
 5. Set up a TFTP and NFS server. Instructions for Ubuntu are below.
 
