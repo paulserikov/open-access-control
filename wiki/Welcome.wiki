@@ -10,6 +10,7 @@ Contents:
   * [BuildTips Hardware Assembly and Testing instructions]
   * [HardwareTips Hardware Installation and Wiring tips]
   * [SoftwareTips Software Installation and Customization]
+  * [LinuxMonitoring How to set up a Sheevaplug PC for monitoring]
   * [DoorInstallation Information about Electrified Door Hardware]
   * [HelpUs Things you can do to help support this project]
 
