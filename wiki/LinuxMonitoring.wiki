@@ -1,9 +1,9 @@
 #summary Linux Monitoring with SheevaPlug PC and Slackware
 
 
-== How to configure a Sheevaplug PC for monitoring ==
+= How to configure a Sheevaplug PC for monitoring =
 
-=This page explains how to set up a Sheevaplug embedded PC for monitoring the Open Access Control.=
+==This page explains how to set up a Sheevaplug embedded PC for monitoring the Open Access Control.==
 <BR>
 Updated 9/25/2011
 <BR>
@@ -109,16 +109,14 @@ basic install is completed. This will leave you with abotu 2GB free on the / fil
 7. Configure networking and plug in your Arduino to the large USB 'A' port. The stock kernel seems
 to have no problem recognizing the built-in network devices and the FTDI chip on the Arduino is 
 recognized as :
-{{{
-/dev/ttyUSB0
-}}}
+<BR>
+_/dev/ttyUSB0_
+<BR>
 8. Now it's time to configure our monitoring stuff. Follow these instructions:
 
-a. Create a normal user to run your monitoring scripts under. We'll call this user "access" for the
-tutorial.
+a. Create a normal user to run your monitoring scripts under. We'll call this user "access" for the tutorial.
 
-b. Create a directory called "scripts" in their home directory. Place the following files in this
-directory and modify the e-mail addresses, messages, etc as needed.
+b. Create a directory called "scripts" in their home directory. Place the following files in this directory and modify the e-mail addresses, messages, etc as needed.
 
 
 start_screen_logging.sh
@@ -185,14 +183,16 @@ _chmod -r 700 /home/access/scripts_
 
 d. Secure the USB serial port:
 
-_chown root:dialout /dev/ttyUSB0_
-<BR>
-_chmod 770 /dev/ttyUSB0_
+{{{
+chown root:dialout /dev/ttyUSB0
 
-_ls -al /dev/ttyU*_
-<BR>
+chmod 770 /dev/ttyUSB0
+
+ls -al /dev/ttyU*
+
 crw-rw---- 1 root dialout 188, 0 2011-09-25 16:36 /dev/ttyUSB0
-
+}}}
+<BR>
 Add the user "access" to the group dialout:
 <BR>
 _gpasswd -a access dialout_
