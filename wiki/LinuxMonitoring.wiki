@@ -10,50 +10,52 @@ Updated 9/25/2011
 <BR>
 Tutorial based on the [http://www.plugcomputer.org/ Sheevaplug PC] from [http://www.globalscaletechnologies.com Globalscale Technologies] and [http://www.armedslack.org ArmedSlack Linux v13.37].
 
-1. Download ArmedSlack v13.37 using these instructions:
+1. Download ArmedSlack 13.37 using these instructions:
 [http://www.armedslack.org/doku.php?id=getslack]
 
+{{{
 mkdir armedslack
 cd armedslack
 rsync -Pavv --delete ftp.armedslack.org::armedslack/armedslack-current .
+}}}
 
-2. Install an 8GB MMC card. Used high-speed model from Sandisk, no problems.
+2. Install an 8GB MMC card. We used high-speed model from Sandisk, no problems.
 
-3. Need mini USB to USB A cable. Linux terminal instructions are in the Slackware install doc here:
-ftp://ftp.armedslack.org/armedslack/armedslack-13.37/INSTALL_KIRKWOOD.TXT
+3. Attach to the plug PC with a mini USB to USB A cable. Linux terminal instructions are in the Slackware install doc here:
+[ftp://ftp.armedslack.org/armedslack/armedslack13.3/INSTALL_KIRKWOOD.TXT]
 
 Windows USB serial drivers are here, also more Linux help:
 
-http://www.plugcomputer.org/plugwiki/index.php/Serial_terminal_program
+[http://www.plugcomputer.org/plugwiki/index.php/Serial_terminal_program]
 
 4. Follow installation instructions at:
-ftp://ftp.armedslack.org/armedslack/armedslack-13.37/INSTALL_KIRKWOOD.TXT
+[ftp://ftp.armedslack.org/armedslack/armedslack-3.37/INSTALL_KIRKWOOD.TXT]
 
-5. Need to set up a TFTP and NFS server. Instructions for Ubuntu are below.
+5. Set up a TFTP and NFS server. Instructions for Ubuntu are below.
 
-TFTP:
-http://www.davidsudjiman.info/2006/03/27/installing-and-setting-tftpd-in-ubuntu/
+[http://www.davidsudjiman.info/2006/03/27/installing-and-setting-tftpd-in-ubuntu/ TFTP]
 
-NFS:
-https://help.ubuntu.com/community/SettingUpNFSHowTo
+[https://help.ubuntu.com/community/SettingUpNFSHowTo NFS]
 
-a. If you get a CRC error on the boot or root image, re-download it from the mirror site and try 
-again. This seems to be a common problem. Also, be sure you did not download and of the packages
+a. If you get a CRC error on the boot or root image, re-download it from the mirror site and try again. This seems to be a common problem. Also, be sure you did not download and of the packages
 in ASCII mode.
 
-b. You need to run "mmcinit" twice on the boot loader to get it to recognize the card.
+b. You need to run _mmcinit_ twice on the boot loader to get it to recognize the card.
 
 
 c. Use an ext2 file system for the /boot volume. The / volume can be ext4 (recommended for journaling)
 
 d. The device names should be as follows:
+{{{
 /dev/mmcblk0p1            2048      206847      102400   83  Linux 
 /dev/mmcblk0p2          206848     1845247      819200   82  Linux swap 
 /dev/mmcblk0p3         1845248    15646719     6900736   83  Linux 
+}}}
 
-Using /dev/sda1,sda2,sda3 does not work! These file system sizes are good for the 8GB card.
+Using _/dev/sda1,sda2,sda3_ does not work! These file system sizes are good for the 8GB card.
 
 e. Use these boot arguments:
+{{{
 Marvell>>   setenv bootargs_console console=ttyS0,115200 
 # note changed device file: 
 Marvell>>   setenv bootargs_root 'root=/dev/mmcblk0p3 waitforroot=10 rootfs=ext4' 
@@ -63,9 +65,9 @@ Marvell>>   setenv bootcmd_slk 'mmcinit;ext2load mmc 0:1 0x01100000 /uinitrd-kir
 # save 
 Marvell>>   saveenv 
 Marvell>>   reset 
+}}}
 
-f. Additional help is available here:
-http://think-deep.com/wiki/becki/linux/sheevaplug
+f. Additional help is available [http://think-deep.com/wiki/becki/linux/sheevaplug here.]
 
 
 6. Install these packages:
@@ -74,30 +76,32 @@ from the inititial installation script. pkgtool does not let you see the "everyt
 type options later. You'll get stuck having to manually add missing libraries/etc like I did, so
 watch out!
 
--Iptables (Needed for securing the system later)
+-_iptables_ (Needed for securing the system later)
 
 -All networking, openssl, basic required packages.
 -All Marvell utilities in the Slackware distribution
 
 -These specific packages we need for the Security Monitoring scripts:
 
-a. msmtp (Command-line mail sending client. Will work with SMTP/Gmail/Yahoo/etc)
+a. _msmtp_ (Command-line mail sending client. Will work with SMTP/Gmail/Yahoo/etc)
           Download and build from:
-          http://msmtp.sourceforge.net
+          [http://msmtp.sourceforge.net]
           Must also install openSSL for TLS/SSL support!
           Also, install a root CA file from Firefox or similar in:
-          /etc/ssl/certs/ca-certificates.crt
+          _/etc/ssl/certs/ca-certificates.crt_
 
-b. minicom (Terminal program, we use this to communicate with the Arduino.)
+b. _minicom_ (Terminal program, we use this to communicate with the Arduino.)
             Use the built-in Slackware package, but be aware that it will just hang and seg-fault
             unless you first modify this file:
-             /etc/minirc.dfl -> Open this file in vi and add a <CR><LF> at the bottom and save.
+             /etc/minirc.dfl -> Open this file in vi and add a carriage return/line feed at the bottom and save.
 
 
-c. screen (We use screen to run minicom interactively)
+c. _screen_ (We use screen to run minicom interactively)
 
-
-Note:
+<BR>
+<BR>
+*Note:
+<BR>
 A complete installation of everything will fit on the 8GB flash card. You can also pull the
 flash card out and copy the complete set of package files from your host PC to a directory once the
 basic install is completed. This will leave you with abotu 2GB free on the / file system.
@@ -105,9 +109,9 @@ basic install is completed. This will leave you with abotu 2GB free on the / fil
 7. Configure networking and plug in your Arduino to the large USB 'A' port. The stock kernel seems
 to have no problem recognizing the built-in network devices and the FTDI chip on the Arduino is 
 recognized as :
-
+{{{
 /dev/ttyUSB0
-
+}}}
 8. Now it's time to configure our monitoring stuff. Follow these instructions:
 
 a. Create a normal user to run your monitoring scripts under. We'll call this user "access" for the
@@ -119,17 +123,19 @@ directory and modify the e-mail addresses, messages, etc as needed.
 
 start_screen_logging.sh
 ________________________________________
+{{{
 #!/bin/bash
 # Start logging functions in a screen
 /bin/su - access -c "screen -dmS MINICOM /home/access/scripts/start_logging.sh"
+}}}
 ________________________________________
 
 
 log_notify.sh
 ________________________________________
+{{{
 #!/bin/bash
-tail -0f /home/access/scripts/access_log.txt | egrep --line-buffered -i "authent
-icated" | while read line
+tail -0f /home/access/scripts/access_log.txt | egrep --line-buffered -i "authenticated" | while read line
         do
                 rm /home/access/scripts/message_tmp.txt
                 cp /home/access/scripts/log_msg.txt /home/access/scripts/message
@@ -139,12 +145,13 @@ _tmp.txt
 pts/message_tmp.txt
                 msmtp -t < /home/access/scripts/message_tmp.txt
         done
+}}}
 ________________________________________
 
 
 log_alert.sh
 ________________________________________
-access@accx:~/scripts$ cat log_alert.sh
+{{{
 #!/bin/bash
 cd /home/access/scripts
 tail -0f /home/access/scripts/access_log.txt | egrep --line-buffered -i "triggered" |
@@ -152,6 +159,7 @@ while read line
         do
                 msmtp -t < /home/access/scripts/alert_msg.txt
         done
+}}}
 ________________________________________
 
 log_msg.txt 
@@ -173,28 +181,32 @@ ________________________________________
 
 
 c. Secure the scripts directory:
-chmod -r 700 /home/access/scripts
+_chmod -r 700 /home/access/scripts_
 
 d. Secure the USB serial port:
 
-chown root:dialout /dev/ttyUSB0 
-chmod 770 /dev/ttyUSB0
+_chown root:dialout /dev/ttyUSB0_
+<BR>
+_chmod 770 /dev/ttyUSB0_
 
-ls -al /dev/ttyU*
+_ls -al /dev/ttyU*_
+<BR>
 crw-rw---- 1 root dialout 188, 0 2011-09-25 16:36 /dev/ttyUSB0
 
 Add the user "access" to the group dialout:
-gpasswd -a access dialout
-
-dialout:x:16:access
-
-
-
-e. run minicom -s and configure the comm parameters. The defaults for Open Access are:
+<BR>
+_gpasswd -a access dialout_
+<BR>
+_dialout:x:16:access_
 
 
+
+e. run _minicom -s_ and configure the comm parameters. The defaults for Open Access are:
+
+<BR>
 /etc/minirc.dfl
 ________________________________________
+{{{
 pr port             /dev/ttyUSB0
 pr lock             /var/lock
 pu baudrate         57600
@@ -214,11 +226,13 @@ pu mnocon4
 pu mhangup
 pu mdialcan
 pu rtscts           No
+}}}
 ________________________________________
 
 
-f.  Configure iptables with some basic rules to protect the monitoring system:
+f.  Configure _iptables_ with some basic rules to protect the monitoring system:
 ________________________________________
+{{{
 # Put this in /etc/sysconfig/iptables
 # chmod 700 it, then add /etc/sysconfig/iptables to /etc/rc.local
 iptables --flush
@@ -226,6 +240,7 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -p tcp  --dport 22 -m state --state NEW -j ACCEPT
 iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
+}}}
 ________________________________________
 
 
@@ -233,8 +248,8 @@ g. Add the following file to /home/access. Modify as needed for your outgoing e-
 
 .msmtprc
 ________________________________________
+{{{
 #Gmail account
-
 account gmail
 host smtp.gmail.com
 from myuser@gmail.com
@@ -259,19 +274,21 @@ user xxx@att.net
 password xxxx
 
 account default : att
+}}}
 ________________________________________
 
 
-h. Add the following lines to /etc/rc.d/rc.local:
+h. Add the following lines to _/etc/rc.d/rc.local_:
 ________________________________________
+{{{
 /etc/sysconfig/iptables
 /bin/su - access -c "/home/access/scripts/log_notify.sh &"
 /bin/su - access -c "/home/access/scripts/log_alert.sh &"
 /home/access/scripts/start_screen_logging.sh
+}}}
 ________________________________________
 
-i. With the Arduino connected, reboot everything and verify that it all comes up automatically. You
-should be able to log in via ssh, type "screen -rd" and be connected to an interactive session on 
+i. With the Arduino connected, reboot everything and verify that it all comes up automatically. You should be able to log in via ssh, type "screen -rd" and be connected to an interactive session on 
 the Arduino. Please secure the ssh system with certificates and/or good passwords.
 
 ----
