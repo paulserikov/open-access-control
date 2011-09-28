@@ -4,6 +4,7 @@
 = Introduction =
 This article is designed to help with the actual implementation of the Open Access Control system in a facility such as a hacker space or home.
 
+[img RFID_complete.jpg]
 ----
 == Disclaimer ==
 This hardware/software project was designed by non-professionals and should be regarded as experimental. No warranties as to the safety, fitness for use or reliability of this project are expressed or implied.
