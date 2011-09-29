@@ -10,7 +10,7 @@ Updated 9/25/2011
 <BR>
 Tutorial based on the [http://www.plugcomputer.org/ Sheevaplug PC] from [http://www.globalscaletechnologies.com Globalscale Technologies] and [http://www.armedslack.org ArmedSlack Linux v13.37].
 
-1. Download [http://www.armedslack.org/doku.php?id=getslackArmedSlack 13.37].
+1. Download [http://www.armedslack.org/doku.php?id=getslack ArmedSlack 13.37].
 
 {{{
 mkdir armedslack
