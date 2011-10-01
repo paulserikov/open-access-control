@@ -14,11 +14,11 @@ In order to implement this project at your space, the following items are recomm
 
   * The latest [http://code.google.com/p/open-access-control/downloads/list Open Access Control hardware]. You can have the board fabricated or purchase one from the [http://shop.23b.org 23b Shop]. All of the parts listed in the Bill of Materials (available in the downloads folder) are available from [http://www.digikey.com Digikey], [http://www.mouser.com Mouser], and other common sources.
 
-  * An [http://arduino.cc Arduino] or compatible micro controller and the latest Arduino software. We have tested with the Duemillanove, Uno and [http://www.freeduino.org/ FreeDuino]. You will need one with an Atmega 328 for this project.
+  * An [http://arduino.cc Arduino] or compatible micro controller and the latest Arduino software. We have tested with the Duemillanove, Uno Seeeduino, and [http://www.freeduino.org/ FreeDuino]. You will need one with an Atmega 328 or higher for this project.
 
-  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A switching power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit provided. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module. A pre-made enclosure with power supply, UPS and battery hookup is available from [http://www.securitypower.com/ Eelectronic Security Device].
+  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A switching power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit provided. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module.
 
-  * Some type of enclosure. Suggestions would be to either look for an old alarm panel to gut (call an installer and ask for the old ones) or a NEMA-format electrical box. These are available from electrical supply shops for a reasonable price.
+  * Some type of enclosure. Suggestions would be to either look for an old alarm panel to gut (call an installer and ask for the old ones) or a NEMA-format electrical box. These are available from electrical supply shops for a reasonable price.   A premade enclosure with power supply, UPS and battery hookup is available from [http://www.securitypower.com/ Electronic Security Devices].
 
   * Alarm sensors such as door magnets, motion detectors, glass-break sensors, etc if using the alarm or door chime feature set.
 
