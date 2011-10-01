@@ -106,6 +106,12 @@ line
 }}}
 
 The "msmtp" package is a great way to send alerting messages out via SMTP without having to run a mail server locally. You can configure it to use gmail, Yahoo, etc or your own private SMTP server on another system.
+----
+==Third Party Software==
+Below are add-in software projects for the Open Access Control.
+
+===Zyphlar===
+[http://heatsynclabs.org Heatsync Labs] has created a simple [https://github.com/zyphlar/Open-Source-Access-Control---Web-Interface Web Interface] to our system.
 
 ----
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].
