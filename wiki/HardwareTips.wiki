@@ -16,7 +16,7 @@ In order to implement this project at your space, the following items are recomm
 
   * An [http://arduino.cc Arduino] or compatible micro controller and the latest Arduino software. We have tested with the Duemillanove, Uno and [http://www.freeduino.org/ FreeDuino]. You will need one with an Atmega 328 for this project.
 
-  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A, switching power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module.
+  * A power supply suitable for the peak current load of all of your door hardware as well as the access control itself. We use a 5A switching power supply and the UPS circuit. You will need a PS that can be adjusted up to 15V if you wish to use the UPS circuit provided. Fully operational, our system draws about 600ma with a door magnet, the access system, battery float charging, several alarm sensors, and an Arduino Ethernet module. A pre-made enclosure with power supply, UPS and battery hookup is available from [http://www.securitypower.com/ Eelectronic Security Device].
 
   * Some type of enclosure. Suggestions would be to either look for an old alarm panel to gut (call an installer and ask for the old ones) or a NEMA-format electrical box. These are available from electrical supply shops for a reasonable price.
 
