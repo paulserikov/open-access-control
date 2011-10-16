@@ -9,7 +9,7 @@ If you find this project useful, you can help support it in the following ways:
 
   * Report bugs and issues with the software or hardware 
   * Send us your code or hardware design improvements
-  * Buy a kit from the [http://shop.23b.org 23B shop] or buy the PCB from the [http://batchpcb.com/index.php/Products/56674 BatchPCB Marketplace]
+  * Buy a kit or assembled unit from the [http://www.accxproducts.com/content/?page_id=63 ACCX Products Store]. ACCX is a for-profit venture that is helping support development of more boards.
   * Send us hardware to test with. We are particularly looking for:
     * Wiegand or RS232/RS422 RFID readers (Indala, Mifare,HID, etc)
     * Magnetic stripe readers
