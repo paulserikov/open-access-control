@@ -20,6 +20,8 @@ In order to implement this project at your space, the following items are recomm
 
   * Some type of enclosure. Suggestions would be to either look for an old alarm panel to gut (call an installer and ask for the old ones) or a NEMA-format electrical box. These are available from electrical supply shops for a reasonable price.   A premade enclosure with power supply, UPS and battery hookup is available from [http://www.securitypower.com/ Electronic Security Devices].
 
+  **For mounting the Open Access Control into an enclosure, Will Bradley of http://www.heatsynclabs.org/ Heatsync Labs] has created an excellent [http://www.thingiverse.com/thing:12828 Laser-cut template].
+
   * Alarm sensors such as door magnets, motion detectors, glass-break sensors, etc if using the alarm or door chime feature set.
 
   * Door hardware, such as an [http://shop.ebay.com/?_from=R40&_trksid=p5197.m570.l1313&_nkw=electric+strike electric strike], mortise-style electric latch or [http://shop.ebay.com/i.html?_nkw=magnetic+door+lock&_sacat=0&_odkw=door+magnet+lock door magnet]. [http://hubpages.com/hub/Electrifying-an-Aluminum-Store-Front-Opening Glass front shop doors] are a bit more expensive to electrify but there is [http://www.adamsrite.com/media/pdf/v2/sw32_4593.pdf drop-in] [http://www.adamsrite.com/NewFiles/e-latch.pdf hardware] to do it.
