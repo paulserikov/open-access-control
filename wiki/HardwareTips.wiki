@@ -45,6 +45,7 @@ When planning for your installation, you need to be aware of fire codes and safe
 This [http://www.securitymagazine.com/articles/requirements-for-card-to-exit-1 article] explains more.
 ----
 ==Installing the controller and wiring==
+
 This is one of those times where physical security is needed for there to be any security. We recommend placing the controller, UPS and other electronics in a sturdy enclosure that is located away from the entry points and public area. Locking it up is also a good idea. 
 
   * All wiring should be run inside walls or conduits and not accessible from outside your perimeter. Consider placing your readers behind glass or at least securing the mounting screws with a drop of Epoxy.  A tamper switch is also an option. Wiegand and serial readers have no protocol security and are vulnerable to skimming, replay and MITM attacks.
@@ -58,6 +59,10 @@ This is one of those times where physical security is needed for there to be any
   * Use solder and heatshrink tubing or quality crimp connectors and a proper crimper for all terminations. Bad connections are the source of 90% of system problems.
 
   * If using the alarm zones on the unit, wire up the sensors in series and use "normally closed" sensors for any security-sensitive application. Also place a 3-5K resistor at the end of each sensor loop. Once you wire up a zone and "train" the alarm, the software will sense a fault if the zone is ever shorted out. This is called a "supervised" zone on commercial alarms.
+
+Sample wiring diagram:
+
+<img src="http://open-access-control.googlecode.com/files/openaccess_v211_wiring.png" width=300>
 ----
 ==Security considerations==
 Once the system is in production, it would be a good idea to prevent unauthorized users from updating the code or tampering with the hardware. Here are some tips:
