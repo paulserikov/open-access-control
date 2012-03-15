@@ -62,7 +62,7 @@ This is one of those times where physical security is needed for there to be any
 
 Sample wiring diagram:
 
-<img src="http://open-access-control.googlecode.com/files/openaccess_v211_wiring.png" width=300>
+<img src="http://open-access-control.googlecode.com/files/openaccess_v211_wiring.png" width=600>
 ----
 ==Security considerations==
 Once the system is in production, it would be a good idea to prevent unauthorized users from updating the code or tampering with the hardware. Here are some tips:
