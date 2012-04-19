@@ -48,17 +48,17 @@ Once you have this working, you can log into the console again and add users.
 ==Add users at the reader==
 You can now add users to the system with a reader that has a key pad attached.  In order to do so you must be listed with an admin user mask, eg: a user that is hard coded as staff, or has a usermask of 5.
 
-  #Swipe key card that is to be provisioned (should have an invalid key read)
-  #Swipe staff key (usermask 5 or hard coded user)
-  #Press 666, Enter. This adds the fob to the user list from the last invalid fob read.
-  #Swipe new fob, and it should be added to the userlist.
+  # Swipe key card that is to be provisioned (should have an invalid key read)
+  # Swipe staff key (usermask 5 or hard coded user)
+  # Press 666, Enter. This adds the fob to the user list from the last invalid fob read.
+  # Swipe new fob, and it should be added to the userlist.
 
 ==Side door emergency code==
 The side door reader (reader2) has a back door code in the event that someone gets completely locked out of the space- they can call us and we can give them the code over the phone.  This is done by using the user 199 as a code for the side door.  Just enter in a six digit number in the users "keyfob" code.  Then when the reader see this code it allows access.  Once this is used, you must change the number.
 
-  #At door2 reader press 666
-  #Enter the 6 digit number that is assigned to user 199
-  #Profit.
+  # At door2 reader press 666
+  # Enter the 6 digit number that is assigned to user 199
+  # Profit.
 
 == Date / Time update==
 You can update the date/time from the serial port.
