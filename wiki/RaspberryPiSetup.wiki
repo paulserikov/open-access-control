@@ -31,7 +31,7 @@ sudo apt-get install minicom screen msmtp arduino
 }}}
 
 ==== Connect the Pi to the Arduino ====
-Once connected, the Arduino will power the Raspberry Pi via the USB port (tested with version B and 512Mb of memory).
+Once connected, the Arduino will power the Raspberry Pi via the USB port (tested with version B and 512Mb of memory).  Unknown if this is outside of spec, but if it burns up we will post a fix.
 
 Upon boot, you will see a /dev/ttyUSB0, which can be used to talk with the Arduino.
 
