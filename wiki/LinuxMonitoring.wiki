@@ -4,10 +4,10 @@
 = How to configure a Sheevaplug PC for monitoring =
 
 ==This page explains how to set up a Sheevaplug embedded PC for monitoring the Open Access Control.==
-<BR>
-Updated 9/25/2011
-<BR>
-<BR>
+
+Updated 10/19/2012
+
+=== Plug Computer Device Setup ===
 Tutorial based on the [http://www.plugcomputer.org/ Sheevaplug PC] from [http://www.globalscaletechnologies.com Globalscale Technologies] and [http://www.armedslack.org ArmedSlack Linux v13.37].
 
 1. Download [http://www.armedslack.org/doku.php?id=getslack ArmedSlack 13.37].
@@ -28,7 +28,7 @@ Windows USB serial drivers are here, also more Linux help:
 [http://www.plugcomputer.org/plugwiki/index.php/Serial_terminal_program]
 
 4. Follow installation instructions at:
-<BR>
+
 [ftp://ftp.armedslack.org/armedslack/armedslack/3.37/INSTALL_KIRKWOOD.TXT]
 
 5. Set up a TFTP and NFS server. Instructions for Ubuntu are below.
@@ -41,7 +41,6 @@ a. If you get a CRC error on the boot or root image, re-download it from the mir
 in ASCII mode.
 
 b. You need to run _mmcinit_ twice on the boot loader to get it to recognize the card.
-
 
 c. Use an ext2 file system for the /boot volume. The / volume can be ext4 (recommended for journaling)
 
@@ -69,12 +68,8 @@ Marvell>>   reset
 
 f. Additional help is available [http://think-deep.com/wiki/becki/linux/sheevaplug here.]
 
-
 6. Install these packages:
--All dev/make/gcc/binutils/glibc/kernel headers/etc for building sources. This is much easier to do
-from the inititial installation script. pkgtool does not let you see the "everything" and "all dev"
-type options later. You'll get stuck having to manually add missing libraries/etc like I did, so
-watch out!
+-All dev/make/gcc/binutils/glibc/kernel headers/etc for building sources. This is much easier to do from the inititial installation script. pkgtool does not let you see the "everything" and "all dev" type options later. You'll get stuck having to manually add missing libraries/etc like I did, so watch out!
 
 -_iptables_ (Needed for securing the system later)
 
@@ -95,13 +90,11 @@ b. _minicom_ (Terminal program, we use this to communicate with the Arduino.)
             unless you first modify this file:
              /etc/minirc.dfl -> Open this file in vi and add a carriage return/line feed at the bottom and save.
 
-
 c. _screen_ (We use screen to run minicom interactively)
 
-<BR>
-<BR>
+
 *Note:
-<BR>
+
 A complete installation of everything will fit on the 8GB flash card. You can also pull the
 flash card out and copy the complete set of package files from your host PC to a directory once the
 basic install is completed. This will leave you with abotu 2GB free on the / file system.
@@ -109,18 +102,17 @@ basic install is completed. This will leave you with abotu 2GB free on the / fil
 7. Configure networking and plug in your Arduino to the large USB 'A' port. The stock kernel seems
 to have no problem recognizing the built-in network devices and the FTDI chip on the Arduino is 
 recognized as :
-<BR>
+
 _/dev/ttyUSB0_
-<BR>
+
 8. Now it's time to configure our monitoring stuff. Follow these instructions:
 
+=== Setup the monitoring system ===
 a. Create a normal user to run your monitoring scripts under. We'll call this user "access" for the tutorial.
 
 b. Create a directory called "scripts" in their home directory. Place the following files in this directory and modify the e-mail addresses, messages, etc as needed.
 
-
 start_screen_logging.sh
-________________________________________
 {{{
 #!/bin/bash
 # Start logging functions in a screen
@@ -129,7 +121,6 @@ ________________________________________
 
 
 log_notify.sh
-
 {{{
 #!/bin/bash
 tail -0f /home/access/scripts/access_log.txt | egrep --line-buffered -i "authenticated" | while read line
@@ -137,12 +128,10 @@ tail -0f /home/access/scripts/access_log.txt | egrep --line-buffered -i "authent
                 rm /home/access/scripts/message_tmp.txt
                 cp /home/access/scripts/log_msg.txt /home/access/scripts/message_tmp.txt
                 sleep 1
-                tail -6 /home/access/scripts/access_log.txt >> /home/access/scri
-pts/message_tmp.txt
+                tail -6 /home/access/scripts/access_log.txt >> /home/access/scripts/message_tmp.txt
                 msmtp -t < /home/access/scripts/message_tmp.txt
         done
 }}}
-
 
 log_alert.sh
 {{{
@@ -154,7 +143,6 @@ while read line
                 msmtp -t < /home/access/scripts/alert_msg.txt
         done
 }}}
-
 
 log_msg.txt 
 {{{
@@ -174,8 +162,11 @@ Please log in to the webcame at http://www.somedomain.com/cameras to check statu
 -The Hacker Space
 }}}
 
-
-
+start_logging.sh
+{{{
+#!/bin/bash
+/usr/bin/minicom -C /home/access/scripts/access_log.txt
+}}}
 
 c. Secure the scripts directory:
 _chmod -r 700 /home/access/scripts_
@@ -191,20 +182,14 @@ ls -al /dev/ttyU*
 
 crw-rw---- 1 root dialout 188, 0 2011-09-25 16:36 /dev/ttyUSB0
 }}}
-<BR>
+
 Add the user "access" to the group dialout:
-<BR>
 _gpasswd -a access dialout_
-<BR>
 _dialout:x:16:access_
-
-
 
 e. run _minicom -s_ and configure the comm parameters. The defaults for Open Access are:
 
-<BR>
 /etc/minirc.dfl
-________________________________________
 {{{
 pr port             /dev/ttyUSB0
 pr lock             /var/lock
@@ -226,8 +211,6 @@ pu mhangup
 pu mdialcan
 pu rtscts           No
 }}}
-________________________________________
-
 
 f.  Configure _iptables_ with some basic rules to protect the monitoring system. Tutorial here:
 
@@ -236,7 +219,6 @@ f.  Configure _iptables_ with some basic rules to protect the monitoring system.
 g. Add the following file to /home/access. Modify as needed for your outgoing e-mail account.
 
 .msmtprc
-________________________________________
 {{{
 #Gmail account
 account gmail
@@ -264,21 +246,16 @@ password xxxx
 
 account default : att
 }}}
-________________________________________
-
 
 h. Add the following lines to _/etc/rc.d/rc.local_:
-________________________________________
 {{{
 /etc/sysconfig/iptables
 /bin/su - access -c "/home/access/scripts/log_notify.sh &"
 /bin/su - access -c "/home/access/scripts/log_alert.sh &"
 /home/access/scripts/start_screen_logging.sh
 }}}
-________________________________________
 
-i. With the Arduino connected, reboot everything and verify that it all comes up automatically. You should be able to log in via ssh, type "screen -rd" and be connected to an interactive session on 
-the Arduino. Please secure the ssh system with certificates and/or good passwords.
+i. With the Arduino connected, reboot everything and verify that it all comes up automatically. You should be able to log in via ssh, type "screen -rd" and be connected to an interactive session on the Arduino. Please secure the ssh system with certificates and/or good passwords.
 
 ----
 Open Access Control by [http://shop.23b.org 23b Shop] is licensed under a [http://creativecommons.org/licenses/by/3.0/Creative Commons Attribution 3.0 Unported License].  
