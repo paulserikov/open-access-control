@@ -18,7 +18,6 @@ Make sure you run _raspi-config_, and expand your file system to fill the entire
 
 To install _rpi-update_:
 {{{
-sudo apt-get update
 sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && sudo chmod +x /usr/bin/rpi-update
 }}}
 
@@ -26,6 +25,7 @@ sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && sudo chmod +x /usr/bin/r
 SSH into the Pi, and issue the following commands:
 
 {{{
+sudo apt-get update
 sudo apt-get install minicom screen msmtp arduino
 # arduino is optional - but it allows you to program the arduino from the Linux host
 }}}
