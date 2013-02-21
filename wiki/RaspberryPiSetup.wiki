@@ -143,9 +143,9 @@ grep dialout /etc/group
 }}}
 Should produce:   "dialout:x:20:pi,access"
 
-e. run _minicom -s_ and configure the comm parameters. The defaults for Open Access are:
+e. configure the com parameters for minicom. 
 
-/etc/minicom/minirc.dfl
+Either edit /etc/minicom/minirc.dfl or paste the following:
 {{{
 cat > /etc/minicom/minirc.dfl << EOF
 pr port             /dev/ttyACM0
