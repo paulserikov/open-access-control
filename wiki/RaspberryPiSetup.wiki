@@ -212,7 +212,6 @@ account default : att
 
 h. Add the following lines to _/etc/rc.d/rc.local_:
 {{{
-/etc/sysconfig/iptables
 /bin/su - access -c "/home/access/scripts/log_notify.sh &"
 /bin/su - access -c "/home/access/scripts/log_alert.sh &"
 /home/access/scripts/start_screen_logging.sh
