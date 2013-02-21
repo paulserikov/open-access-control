@@ -15,12 +15,17 @@ Download the software from [http://www.raspberrypi.org/downloads Raspberry Pi] s
 Please follow their [http://elinux.org/RPi_Easy_SD_Card_Setup setup instructions] before beginning on this. We recommend an >8GB SD card (High speed recommended) at a minimum.  
 
 ==== After boot ====
-Make sure you run _raspi-config_, and expand your file system to fill the entire SD card.  Also, unless your are running with a head, configure your system to have less video memory via the _raspi-config_ tool.  Once your setup, grab [https://github.com/Hexxeh/rpi-update rpi-update] and run _rpi-update_ to make sure the firmware is up-to-date.
+Make sure you run _raspi-config_, and expand your file system to fill the entire SD card.  Also, unless your are running with a head, configure your system to have less video memory via the _raspi-config_ tool.  
+
+Make sure to run the update process from within the raspi-config tool as well.
+
+<wiki:comment>Once your setup, grab [https://github.com/Hexxeh/rpi-update rpi-update] and run _rpi-update_ to make sure the firmware is up-to-date.
 
 To install _rpi-update_:
 {{{
 sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && sudo chmod +x /usr/bin/rpi-update
 }}}
+</wiki:comment>
 
 ==== Install all the software packages ====
 SSH into the Pi, and issue the following commands:
