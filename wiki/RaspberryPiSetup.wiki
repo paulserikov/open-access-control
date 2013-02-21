@@ -6,6 +6,7 @@
 ==This page explains how to set up a Raspberry Pi embedded PC for monitoring the Open Access Control.==
 
 Created 10/19/2012
+Updated 02/20/2013
 
 === Raspberry Pi Device Setup ===
 ==== Download the software ====
@@ -117,27 +118,37 @@ EOF
 }}}
 
 c. Secure the scripts directory:
-_chmod -r 700 /home/access/scripts_
+{{{
+chmod -r 700 /home/access/scripts
+}}}
 
 d. Secure the USB serial port:
 
 {{{
-_chown root:dialout /dev/ttyUSB0
-chmod 770 /dev/ttyUSB0
-ls -al /dev/ttyU*_
+chown root:dialout /dev/ttyACM0  
+chmod 770 /dev/ttyACM0
+ls -al /dev/ttyA*
 
-crw-rw---T 1 root dialout 188, 0 Oct 19 12:30 /dev/ttyUSB0
+crw-rw---T 1 root dialout 166,  0 Feb 20 21:37 /dev/ttyACM0
 }}}
 
 Add the user "access" to the group dialout:
-_gpasswd -a access dialout_
-_dialout:x:16:access_
+{{{
+gpasswd -a access dialout
+}}}
+
+Check to see if the dialout user has been created:
+{{{
+grep dialout /etc/group
+}}}
+Should produce:   "dialout:x:20:pi,access"
 
 e. run _minicom -s_ and configure the comm parameters. The defaults for Open Access are:
 
-/etc/minirc.dfl
+/etc/minicom/minirc.dfl
 {{{
-pr port             /dev/ttyUSB0
+cat > /etc/minicom/minirc.dfl << EOF
+pr port             /dev/ttyACM0
 pr lock             /var/lock
 pu baudrate         57600
 pu minit
@@ -156,6 +167,7 @@ pu mnocon4
 pu mhangup
 pu mdialcan
 pu rtscts           No
+EOF
 }}}
 
 f.  Configure _iptables_ with some basic rules to protect the monitoring system. Tutorial here:
